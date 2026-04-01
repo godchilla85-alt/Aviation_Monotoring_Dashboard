@@ -1,9 +1,8 @@
-// opensky.js
+
 export async function fetchAircraft() {
     const username = 'godchilla85@gmail.com';
   const password = 'kYj3mV#c*5usG.R';
-  
-  // WICHTIG: Das btoa() muss im Browser verfügbar sein (ist es normalerweise)
+
   const auth = btoa(`${username}:${password}`);
 
 const proxyUrl = "https://corsproxy.io/?";

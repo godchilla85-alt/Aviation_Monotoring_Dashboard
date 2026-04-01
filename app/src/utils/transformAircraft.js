@@ -7,7 +7,7 @@ export function transformAircraft(states) {
 
   const features = states
     .filter(plane => plane[5] !== null && plane[6] !== null)
-    .slice(0, 200) // LIMIT für Performance
+    .slice(0, 200) 
     .map(plane => ({
       type: "Feature",
       geometry: {

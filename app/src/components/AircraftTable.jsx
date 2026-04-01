@@ -4,15 +4,13 @@ export default function AircraftTable({ aircraft, onSelect, selectedId }) {
   
   const displayData = aircraft || [];
 
-  const handleClick = (plane) => {
-
-    const callsign = plane[1] || "Unknown";
-    const icao24 = plane[0];
-    
-    console.log(`Flug ausgewählt: ${callsign} (ICAO: ${icao24})`);
-
-  };
-
+if (displayData.length === 0) {
+  return (
+    <div className="p-6 text-center text-gray-500 italic">
+      No aircraft found matching your search.
+    </div>
+  );
+}
   return (
     <div className="p-6 h-full">
       <h2 className="text-xl font-bold mb-4">Live Flugliste (Top 30)</h2>
@@ -23,7 +21,7 @@ export default function AircraftTable({ aircraft, onSelect, selectedId }) {
           key={plane[0]} 
           className={`border p-3 mb-2 rounded cursor-pointer transition-all ${
               selectedId === plane[0] 
-                ? 'bg-green-100 border-green-500 shadow-md' // Markierung in der Liste
+                ? 'bg-green-100 border-green-500 shadow-md' 
                 : 'bg-white hover:bg-gray-100'
             }`}>
             <p><b>Flight:</b> {plane[1] || "Unknown"}</p> 
