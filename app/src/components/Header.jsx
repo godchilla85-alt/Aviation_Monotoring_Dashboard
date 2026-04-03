@@ -5,8 +5,8 @@ export default function Header({onSearch}){
     return(
         <div className="w-full h-10 flex items-center px-6 py-6 bg-white/10 backdrop-blur-md border-b border-white/20 justify-between">
         <div className="w-1/2 flex justify-items-start">
-            <MdAirplaneTicket className="text-white text-4xl mr-2"></MdAirplaneTicket>
-            <h3 className="text-white text-2xl font-bold mr-30">Air Traffic Dashboard</h3>
+            <MdAirplaneTicket className="text-stone-500 text-4xl mr-2"></MdAirplaneTicket>
+            <h3 className="text-stone-500 text-2xl font-bold mr-30">Air Traffic Dashboard</h3>
             </div>
             <div className="w-1/2 justify-items-end">
             <div className="flex items-center gap-4 w-96">

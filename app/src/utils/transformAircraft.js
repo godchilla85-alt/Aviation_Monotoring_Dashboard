@@ -1,5 +1,4 @@
 export function transformAircraft(states) {
-
   if (!states) return {
     type: "FeatureCollection",
     features: []
@@ -15,10 +14,11 @@ export function transformAircraft(states) {
         coordinates: [plane[5], plane[6]]
       },
       properties: {
-        callsign: plane[1],
+        icao: plane[0],           
+        callsign: plane[1]?.trim(),
         altitude: plane[7],
         velocity: plane[9],
-        heading: plane[10]
+        true_track: plane[10] || 0 
       }
     }))
 
